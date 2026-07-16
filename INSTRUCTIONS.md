@@ -1,4 +1,4 @@
-# AGENTS.md
+# INSTRUCTIONS.md
 
 ## General principles
 
@@ -63,4 +63,3 @@
 
 * Do not expose, commit, or log secrets or other sensitive information.
 * Do not perform destructive or irreversible operations without explicit authorization.
-
