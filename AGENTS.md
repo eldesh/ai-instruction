@@ -16,6 +16,7 @@
 * Do not introduce a new dependency, tool, framework, or convention without a clear need.
 * Keep configuration, documentation, implementation, and tests consistent with one another.
 * Do not modify unrelated user changes.
+* Match the style and idioms of the surrounding code unless the task explicitly requires changing them.
 
 ## Code organization
 
