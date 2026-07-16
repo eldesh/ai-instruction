@@ -21,7 +21,7 @@
 ## Code organization
 
 * Keep files, directories, functions, types, and modules focused on clear responsibilities.
-* Split code when a unit contains multiple separable responsibilities.
+* Split code when doing so is relevant to the task and makes responsibilities clearer.
 * Prefer coherent restructuring over local patching when the current structure no longer matches the code's responsibilities.
 * Add, move, or remove files when doing so makes ownership and boundaries clearer.
 * Keep names precise and domain-oriented.
@@ -58,3 +58,9 @@
 * Do not include unrelated changes in a commit.
 * Do not leave mechanical, temporary, or fixup-style commits in the final history when history editing is appropriate and safe.
 * Do not rewrite shared history or discard existing work without explicit authorization.
+
+## Safety
+
+* Do not expose, commit, or log secrets or other sensitive information.
+* Do not perform destructive or irreversible operations without explicit authorization.
+
