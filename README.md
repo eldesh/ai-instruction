@@ -36,3 +36,13 @@ Claude Codeのユーザー共通の指示として使用するには、次のよ
 ```sh
 ln -s /path/to/repo/ai-instruction.git/INSTRUCTIONS.md ~/.claude/CLAUDE.md
 ```
+
+## 任意の指示
+
+`optional/` には、プロジェクトごとに導入を選択する任意の指示があります。これらのファイルは自動的に読み込まれません。
+
+### 変更対象に基づく `AGENTS.md` の探索
+
+[`optional/target-scoped-agents.md`](optional/target-scoped-agents.md) は、変更対象ファイルごとにプロジェクトルートからその親ディレクトリまでの `AGENTS.md` を確認し、対象に近い指示を優先させるための指示です。
+
+この動作が必要なプロジェクトでのみ、同ファイルの内容をそのプロジェクトのルート `AGENTS.md` にコピーまたは統合してください。グローバルな `INSTRUCTIONS.md` には統合しません。
