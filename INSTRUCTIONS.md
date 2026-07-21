@@ -76,8 +76,9 @@
 
 ## Version control
 
-* Keep commits focused and internally consistent.
+* Make each commit a coherent logical change that reflects the intended result rather than the chronology of trial and correction.
 * Do not include unrelated changes in a commit.
+* When further instructions revise work in the immediately preceding unshared commit created by the agent for the current task, integrate the revision into that commit instead of adding a follow-up correction commit.
 * Do not leave mechanical, temporary, or fixup-style commits in the final history when history editing is appropriate and safe.
 * Do not rewrite shared history or discard existing work without explicit authorization.
 
