@@ -18,7 +18,7 @@ Windows版ChatGPTアプリのCodexでは、「設定 > パーソナライズ > �
 %USERPROFILE%\.codex\AGENTS.md
 ```
 
-`INSTRUCTIONS.md` をそのまま使用するには、コマンドプロンプトで次を実行します。
+リポジトリがWindows上にある場合、コマンドプロンプトで次を実行します。
 
 ```bat
 mkdir "%USERPROFILE%\.codex"
@@ -26,6 +26,13 @@ mklink "%USERPROFILE%\.codex\AGENTS.md" "C:\path\to\ai-instruction.git\INSTRUCTI
 ```
 
 `C:\path\to\ai-instruction.git` はこのリポジトリの実際のパスに置き換えます。シンボリックリンクの作成には、Windowsの開発者モードまたは管理者権限が必要です。
+
+リポジトリがWSL上にある場合は次のようにします。
+
+```bat
+mkdir "%USERPROFILE%\.codex"
+mklink "%USERPROFILE%\.codex\AGENTS.md" "\\wsl.localhost\Ubuntu-22.04\path\to\repo\ai-instruction.git\INSTRUCTIONS.md"
+```
 
 Codexが個人用の `AGENTS.md` を読み込む方法については、[Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md#how-codex-discovers-guidance) を参照してください。
 
@@ -37,21 +44,31 @@ Claude Codeのユーザー共通の指示として使用するには、次のよ
 ln -s /path/to/repo/ai-instruction.git/INSTRUCTIONS.md ~/.claude/CLAUDE.md
 ```
 
-### WSL上のリポジトリをWindows側のClaude Codeと共有する
+### Windows版Claude Code
 
-Claude CodeをWindowsネイティブ(WSLではなく)で使っている場合、ユーザー共通の指示は次の場所に置きます。
+Windows版Claude Codeでは、ユーザー共通の指示として次のファイルが使用されます。
 
 ```text
 %USERPROFILE%\.claude\CLAUDE.md
 ```
 
-このリポジトリがWSL側にある場合、シンボリックリンクの作成にはWindowsの開発者モードまたは管理者権限が必要になるため、代わりにCLAUDE.mdの`@`インポート構文を使うと権限なしで参照できます。`%USERPROFILE%\.claude\CLAUDE.md` の中身を次の1行だけにします。
+Claude Codeではシンボリックリンクの代わりにインポート機能が使えます。
 
-```text
-@\\wsl.localhost\<ディストリ名>\path\to\repo\ai-instruction.git\INSTRUCTIONS.md
+リポジトリがWindows上にある場合、コマンドプロンプトで次を実行します。
+
+```bat
+mkdir "%USERPROFILE%\.claude"
+echo @C:\path\to\ai-instruction.git\INSTRUCTIONS.md > "%USERPROFILE%\.claude\CLAUDE.md"
 ```
 
-`<ディストリ名>` は `wsl -l` で確認できるディストリビューション名(例: `Ubuntu-22.04`)、パスの残りはこのリポジトリのWSL側の実際のパスに置き換えます。
+`C:\path\to\ai-instruction.git` はこのリポジトリの実際のパスに置き換えます。
+
+リポジトリがWSL上にある場合は次のようにします。
+
+```bat
+mkdir "%USERPROFILE%\.claude"
+echo @\\wsl.localhost\Ubuntu-22.04\path\to\repo\ai-instruction.git\INSTRUCTIONS.md > "%USERPROFILE%\.claude\CLAUDE.md"
+```
 
 ## 任意の指示
 
