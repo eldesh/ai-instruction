@@ -37,6 +37,22 @@ Claude Codeのユーザー共通の指示として使用するには、次のよ
 ln -s /path/to/repo/ai-instruction.git/INSTRUCTIONS.md ~/.claude/CLAUDE.md
 ```
 
+### WSL上のリポジトリをWindows側のClaude Codeと共有する
+
+Claude CodeをWindowsネイティブ(WSLではなく)で使っている場合、ユーザー共通の指示は次の場所に置きます。
+
+```text
+%USERPROFILE%\.claude\CLAUDE.md
+```
+
+このリポジトリがWSL側にある場合、シンボリックリンクの作成にはWindowsの開発者モードまたは管理者権限が必要になるため、代わりにCLAUDE.mdの`@`インポート構文を使うと権限なしで参照できます。`%USERPROFILE%\.claude\CLAUDE.md` の中身を次の1行だけにします。
+
+```text
+@\\wsl.localhost\<ディストリ名>\path\to\repo\ai-instruction.git\INSTRUCTIONS.md
+```
+
+`<ディストリ名>` は `wsl -l` で確認できるディストリビューション名(例: `Ubuntu-22.04`)、パスの残りはこのリポジトリのWSL側の実際のパスに置き換えます。
+
 ## 任意の指示
 
 `optional/` には、プロジェクトごとに導入を選択する任意の指示があります。これらのファイルは自動的に読み込まれません。
