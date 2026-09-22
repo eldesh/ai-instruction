@@ -12,7 +12,7 @@ ln -s /path/to/repo/ai-instruction.git/INSTRUCTIONS.md ~/.codex/AGENTS.md
 
 ### Windows版ChatGPTアプリ
 
-Windows版ChatGPTアプリのCodexでは、「設定 > パーソナライズ > カスタム指示」の個人用指示として次のファイルが使用されます。
+Windows版ChatGPTアプリのCodexでは、「個人設定 > パーソナライズ > Codexの指示」の個人用指示として次のファイルが使用されます。
 
 ```text
 %USERPROFILE%\.codex\AGENTS.md
