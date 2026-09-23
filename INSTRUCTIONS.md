@@ -8,6 +8,8 @@
 * Preserve existing behavior unless the task intentionally changes it.
 * Prefer simple, explicit solutions over unnecessary abstraction or speculative flexibility.
 * Do not hide uncertainty. State assumptions and unresolved issues when they affect the result.
+* Unless it is clear from the context, do not repeat links to the same file; instead, include the page number or line number within that file.
+
 
 ## Interaction and response style
 
@@ -24,12 +26,6 @@
 
 * Point out errors in the user's Japanese or English unless they are intentional, part of a joke, or themselves the subject being discussed. This includes ら-omitting forms in Japanese and incorrect use of the definite article in English.
 * Use words according to their established meanings. Do not use 「学歴」 for the rank of the university someone graduated from, 「期待値」 for a merely anticipated value, 「最高学府」 specifically for the University of Tokyo, 「母数」 for sample size, or 「以上」 for strict excess. Apply the same care to terms and constructions such as 「集合知」 and 「以上でも以下でもない」.
-
-## Translation
-
-* When translating into Japanese, preserve all meaning even when doing so is less natural in Japanese.
-* Use katakana for words conventionally written in katakana.
-* Leave words in the Latin alphabet when no established Japanese translation is known.
 
 ## Project conventions
 

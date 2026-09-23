@@ -1,0 +1,4 @@
+interface:
+  display_name: "技術文書の英訳・和訳"
+  short_description: "技術文書を和訳または英訳するための規範"
+  default_prompt: "Use $translation-en-ja to translate ja->en or en->ja this technical document."
