@@ -1,0 +1,4 @@
+interface:
+  display_name: "ソフトウェアプロジェクトの編集"
+  short_description: "ソフトウェアプロジェクトを編集するための規範"
+  default_prompt: "Use $code-writing to editing this project."

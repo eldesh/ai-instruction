@@ -1,16 +1,5 @@
 # INSTRUCTIONS.md
 
-## General principles
-
-* Understand the relevant code, documentation, conventions, and constraints before making changes.
-* Optimize for the intended final design, not merely for the smallest possible diff.
-* Make only changes that are necessary for the requested outcome.
-* Preserve existing behavior unless the task intentionally changes it.
-* Prefer simple, explicit solutions over unnecessary abstraction or speculative flexibility.
-* Do not hide uncertainty. State assumptions and unresolved issues when they affect the result.
-* Unless it is clear from the context, do not repeat links to the same file; instead, include the page number or line number within that file.
-
-
 ## Interaction and response style
 
 * Be concise unless additional detail is necessary or explicitly requested.
@@ -36,23 +25,6 @@
 * Do not modify unrelated user changes.
 * Match the style and idioms of the surrounding code unless the task explicitly requires changing them.
 
-## Code organization
-
-* Keep files, directories, functions, types, and modules focused on clear responsibilities.
-* Split code when doing so is relevant to the task and makes responsibilities clearer.
-* Prefer coherent restructuring over local patching when the current structure no longer matches the code's responsibilities.
-* Add, move, or remove files when doing so makes ownership and boundaries clearer.
-* Keep names precise and domain-oriented.
-* Prefer small functions with clear inputs, outputs, and side effects.
-* Avoid duplication when a shared concept can be expressed clearly in one place.
-
-## Comments and documentation
-
-* Document public behavior, important invariants, non-obvious constraints, and design decisions.
-* Explain meaning, responsibility, or intent rather than restating the implementation.
-* Update documentation when behavior, interfaces, workflows, or user-facing examples change.
-* Keep examples accurate and executable where practical.
-
 ## Testing and verification
 
 * Add or update tests for behavior changes and bug fixes.
@@ -69,14 +41,6 @@
 * Commit generated artifacts only when the repository expects them to be committed.
 * Keep dependency declarations and lockfiles synchronized.
 * Avoid unrelated dependency updates.
-
-## Version control
-
-* Make each commit a coherent logical change that reflects the intended result rather than the chronology of trial and correction.
-* Do not include unrelated changes in a commit.
-* When further instructions revise work in the immediately preceding unshared commit created by the agent for the current task, integrate the revision into that commit instead of adding a follow-up correction commit.
-* Do not leave mechanical, temporary, or fixup-style commits in the final history when history editing is appropriate and safe.
-* Do not rewrite shared history or discard existing work without explicit authorization.
 
 ## Safety
 
