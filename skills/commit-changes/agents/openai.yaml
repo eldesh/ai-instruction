@@ -1,0 +1,4 @@
+interface:
+  display_name: "バージョン管理されたプロジェクトの変更をコミット"
+  short_description: "バージョン管理されたプロジェクトの変更をコミットする規範"
+  default_prompt: "Use $commit-changes to editing history of this project repository."
